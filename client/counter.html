@@ -1,0 +1,22 @@
+<Header bind:count dude="walt" />
+
+<button on:click="set({ count: count + 1 })">+1</button>
+
+<p>
+  <button on:click="set({ count: 0})">Reset Counter</button>
+</p>
+
+<script>
+  import Header from './header'
+
+  export default {
+    data() {
+      return {
+        count: 0
+      }
+    },
+    components: {
+      Header
+    }
+  }
+</script>
